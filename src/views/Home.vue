@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <props-test :title="addClick" @costom-event="parentEvent"></props-test>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import PropsTest from '@/components/PropsTest.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    PropsTest
+  },
+  data() {
+    return {
+      addClick: 'クリック変更！'
+    }
+  },
+  methods: {
+    parentEvent(e) {
+      console.log(e);
+    }
   }
 }
 </script>
