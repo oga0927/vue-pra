@@ -15,7 +15,7 @@ export default {
   },
   data() {
     return {
-      addClick: 'クリック成功！'
+      addClick: 'クリック変更！'
     }
   },
   methods: {
