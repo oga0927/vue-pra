@@ -1,27 +1,38 @@
 <template>
   <div>
-    <props-test :title="addClick" @costom-event="parentEvent"></props-test>
+    <props-test :title="addClick" @costom-event="parentMethod"></props-test>
+    <form-test v-model="parentValue"></form-test>
+    {{ parentValue }}
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import PropsTest from '@/components/PropsTest.vue'
+import FormTest from '@/components/FormTest.vue'
+
 
 export default {
   name: 'Home',
   components: {
-    PropsTest
+    PropsTest,
+    FormTest
+
+    
   },
   data() {
     return {
-      addClick: 'クリック変更！'
+      addClick: 'クリック！！！',
+      parentValue: ''
     }
   },
   methods: {
-    parentEvent(e) {
+    parentMethod(e) {
       console.log(e);
     }
   }
 }
 </script>
+
+<style>
+
+</style>
