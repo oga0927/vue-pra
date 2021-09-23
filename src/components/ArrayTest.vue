@@ -1,12 +1,17 @@
 <template>
   <div>
-    <test-test></test-test>
+    {{ item.name }}
   </div>
 </template>
 
 <script>
 export default {
-
+  name: 'ArrayTest',
+  props: {
+    item: {
+      type: Object
+    }
+  }
 }
 </script>
 

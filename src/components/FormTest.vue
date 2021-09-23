@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'FormTest',
+  name: 'ChildVmodel',
   props: {
     value: {
       type: String
