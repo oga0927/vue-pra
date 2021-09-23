@@ -1,7 +1,7 @@
 <template>
   <div>
     {{ title }}
-    <button @click="childMethods">ボタン</button>
+    <button @click="childMethods">プッシュ</button>
   </div>
 </template>
 
@@ -11,12 +11,12 @@ export default {
   props: {
     title: {
       type: String
-    }
+    },
   },
   methods: {
     childMethods() {
-      this.$emit('costom-event', 'おりゃ〜')
-    }
+      this.$emit('costom-event', '子から親だーーー！')
+    },
   }
 }
 </script>
